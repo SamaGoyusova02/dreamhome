@@ -7,15 +7,26 @@
      <link href="src/output.css" rel="stylesheet">
      <link rel="stylesheet" href="src/style.css">
      <link rel="stylesheet" href="src/font.css">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
-         
+           <!--Mobil header-->
+                        <div id="menubar" class=" bg-[#005555] opacity-[.8] h-[100vh] w-[150px] fixed top-0 left-[-100%] duration-500 ease-linear z-[1000]">
+                           <p onclick="closemenu()" class="flex justify-end pr-3 pt-3"> <i class="fa-regular fa-circle-xmark text-white"></i></p>
+                            <ul class="text-white flex flex-col items-center gap-1 mt-13">
+                                <li >Home</li>
+                                <li>Properties</li>
+                                <li>Services</li>
+                                <li>About</li>
+                                <li>Contact Us</li>
+                            </ul>
+                        </div>
         <div class="container w-full">
                  <swiper-container class="mySwiper w-full" pagination="true" pagination-dynamic-bullets="true" autoplay="true" >
                     <swiper-slide class="swback1 ">
-                        <div class=" desktop-header hidden md:block lg:block h-[100vh] max-w-full ">
+                        <div class=" desktop-header hidden md:block lg:block h-[100vh] w-[100%] ">
                             <div class="bg-[#005555] mx-15 mt-5 flex justify-between px-10 h-[80px] items-center rounded-[15px]">
                                 <div><p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p></div>
                                 <ul class="flex gap-5 ">
@@ -42,17 +53,6 @@
                         </div>
                         </div>
                         
-                       <!--Mobil header-->
-                        <div id="menubar" class=" bg-[#005555] opacity-[.8] h-[100vh] w-[150px] fixed top-0 left-[-100%] duration-500 ease-linear z-[1000]">
-                           <p onclick="closemenu()" class="flex justify-end pr-3 pt-3"> <i class="fa-regular fa-circle-xmark text-white"></i></p>
-                            <ul class="text-white flex flex-col items-center gap-1 mt-13">
-                                <li >Home</li>
-                                <li>Properties</li>
-                                <li>Services</li>
-                                <li>About</li>
-                                <li>Contact Us</li>
-                            </ul>
-                        </div>
                         <div class=" block md:hidden lg:hidden h-[100vh] w-[100%]">
                                 <div class="bg-[#005555] h-[70px] mx-5 mt-5 rounded-[10px] flex justify-between items-center px-3">
                                 <p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p>
@@ -399,12 +399,162 @@
     </header>
 
     <main>
-        <div class="flex flex-col md:flex-row lg:flex-row justify-between px-[100px]  mt-7">
+        <div class="flex flex-col md:flex-row lg:flex-row justify-between px-[100px]  mt-10">
             <p class="text-[1.8em] text-center font-[600]">Popular Properties</p>
-            <button class="bg-[#005555] text-center mt-6 lg:mt-0  w-[170px] h-[45px] text-white flex justify-center rounded-[25px] items-center px-2 ">View all Properties</button>
+            <button class="bg-[#005555] text-center mt-6 lg:mt-0  w-[170px] h-[45px] text-white flex justify-center rounded-[25px] items-center  ">View all Properties</button>
+        </div>
+        <!--Popular Home-->
+        <div id="popular" class=" popular flex gap-5 overflow-x-scroll mt-10 mx-2 lg:mx-[100px]">
+            
+         </div>
+         <!--cards-->
+         <div id="card" class="bg-[#f2f4f6] flex flex-col md:flex-row lg:flex-row flex-wrap justify-center items-center lg:gap-5  py-10 mt-10">
+           
+         </div>
+         <!--Customer says-->
+         <div class="flex flex-col md:flex-row lg:flex-row justify-between items-center lg:mx-20 mt-10">
+            <div><p class="text-3xl text-[#00204a] font-[600]">Customer Says</p></div>
+            <div class="flex gap-3 mt-5 lg:mt-0">
+                <button class="bg-[#f2f4f6] w-[90px] h-[40px] rounded-[30px] text-[#00204a] hover:bg-[#00204a] hover:text-white duration-300 ease-in-out hover:-translate-y-2">Prev</button>
+                <button class="bg-[#f2f4f6] w-[90px] h-[40px] rounded-[30px] text-[#00204a] hover:bg-[#00204a] hover:text-white duration-300 ease-in-out hover:-translate-y-2">Next</button>
+            </div>
+         </div>
+         <!--Customer says davamii-->
+         <div id="customer" class="customer mt-10 flex gap-5 overflow-x-scroll mx-5 lg:mx-[100px]">
+           
+         </div>
+
+        <div class="bg-[#f8f9fa] pb-10">
+            <!--I-->
+             <div class="flex flex-col  justify-center items-center mt-15 pt-10">
+            <p class="text-[#00204a] text-2xl lg:text-3xl font-[600] pb-4 text-center">Let's find home that's perfect for <br/>you</p>
+            <p class="text-[#7c7c7d] text-[.9em] lg:text-[1em] text-center w-[80%] lg:w-[40%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam enim  pariatur similique debitis vel nisi qui reprehenderit. </p>
+         </div>
+          <!--II-->
+          <div class="flex flex-col md:flex-row lg:flex-row justify-around flex-wrap mx-[40px] mt-13 ">
+            <div class="um flex flex-col gap-10 order-2 md:order-1 lg:order-1">
+                <div class="flex gap-4 items-center ">
+                    <div  data-aos="zoom-in"  data-aos-duration="1500" ><p class="bg-[#ececef] h-[80px] w-[80px] rounded-[50%] flex justify-center items-center hover:border hover:border-[#00204a] duration-300 hover:scale-[1.1]"><i class="fa-solid fa-house "></i></p></div>
+                    <div  data-aos="zoom-in"  data-aos-duration="1500"  class="w-[55%]">
+                        <p class="text-[#00204a] font-[550]">2M Properties</p>
+                        <p class="text-[#7c7c7d]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste.</p>
+                    </div>
+                </div>
+
+                  <div class="flex gap-4 items-center ">
+                    <div  data-aos="zoom-in"  data-aos-duration="1500"><p class="bg-[#ececef] h-[80px] w-[80px] rounded-[50%] flex justify-center items-center hover:border hover:border-[#00204a] duration-300 hover:scale-[1.1]"><i class="fa-solid fa-user "></i></p></div>
+                    <div data-aos="zoom-in"  data-aos-duration="1500" class="w-[55%]">
+                        <p class="text-[#00204a] font-[550]">Top Rated Agents</p>
+                        <p class="text-[#7c7c7d]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste.</p>
+                    </div>
+                </div>
+
+                  <div class="flex gap-4 items-center ">
+                    <div  data-aos="zoom-in"  data-aos-duration="1500" ><p class="bg-[#ececef] h-[80px] w-[80px] rounded-[50%] flex justify-center items-center hover:border hover:border-[#00204a] duration-300 hover:scale-[1.1]"><i class="fa-solid fa-shield-halved "></i></p></div>
+                    <div  data-aos="zoom-in"  data-aos-duration="1500" class="w-[55%]">
+                        <p class="text-[#00204a] font-[550]">Legit Properties</p>
+                        <p class="text-[#7c7c7d]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:mt-10 lg:mt-0 mb-10 md:mb-0 lg:mb-0 order-1 md:order-2 lg:order-2"><img class="w-[400px] h-[360px] lg:w-[750px] lg:h-[520px]" src="img/img_1.jpg" alt="img_1"/></div>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 px-[20px] lg:px-[140px] mt-10 ">
+            <div data-aos="fade-up"  data-aos-duration="2000" >
+                <p class="text-[#00204a] text-4xl font-[700]">3,298</p>
+                <p class="text-[#888989]"># of Buy Properties</p>
+            </div>
+            <div  data-aos="fade-up"  data-aos-duration="2000">
+                <p class="text-[#00204a] text-4xl font-[700]">2,181</p>
+                <p lass="text-[#888989]"># of Sell Properties</p>
+            </div>
+            <div  data-aos="fade-up"  data-aos-duration="2000">
+                <p class="text-[#00204a] text-4xl font-[700]">9,316</p>
+                <p lass="text-[#888989]"># of All Properties</p>
+            </div>
+            <div  data-aos="fade-up"  data-aos-duration="2000">
+                <p class="text-[#00204a] text-4xl font-[700]">7,191</p>
+                <p lass="text-[#888989]"># of Agents</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="h-[200px] flex flex-col justify-center items-center mb-15">
+            <p class="text-[#00204a] text-2xl md:text-3xl lg:text-4xl font-[600] text-center mt-15">Be a part of our growing real state agents</p>
+            <button class="bg-[#005555] w-[240px] h-[50px] rounded-[30px] px-3 text-white mt-8 hover:shadow-[0_0_10px_#7a87b2]  hover:-translate-y-1.5">Apply for Real Estate agent</button>
+        </div>
+
+        <!--Our Agents-->
+        <div class="bg-[#f8f9fa] py-10">
+            <div class="flex flex-col justify-center items-center ">
+                <p class="text-4xl text-[#00204a] font-[550]">Our Agents</p>
+              <div class="flex justify-center items-center">
+                <p class="text-[#7c7c7d] text-[.9em] mt-5 w-[80%] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam enim pariatur similique debitis vel nisi qui reprehenderit totam? Quod maiores.</p>
+             </div>
+            </div>
+
+            <!--II-->
+            <div id="agent" class="ummm flex flex-col lg:flex-row flex-wrap justify-center  gap-5 mt-12">
+                 
+            </div>
         </div>
     </main>
 
+    <footer class="bg-[#efefef] py-10">
+        <div class="umm flex flex-col lg:flex-row flex-wrap gap-10 pl-6 lg:justify-around lg:mx-[100px]">
+            <div class="flex flex-col gap-2">
+                <p class="text-[#00204a] text-[1.2em] font-[650] duration-300 ease-in-out">Contact</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">43 Raymouth Rd. Baltemoer, London 3910</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">+1(123)-456-7890</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black  duration-300 ease-in-out">+1(123)-456-7890</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">info@mydomain.com</p>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <p class="text-[#00204a] text-[1.2em] font-[650] duration-300 ease-in-out">Sources</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">About us</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">Services</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">Vision</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">Mission</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">Terms</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">Privacy</p>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <p class="text-[#00204a] text-[1.2em] font-[650] duration-300 ease-in-out">Partners</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">Business</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">Careers</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">Blog</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">FAQ</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">Creative</p>
+            </div>
+
+            <div>
+                <p class="text-[#00204a] text-[1.2em] font-[650] duration-300 ease-in-out">Links</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">Our Vision</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">About us</p>
+                <p class=" under text-[.9em] text-[#888888] underline  hover:text-black duration-300 ease-in-out">Contact us</p>
+                <div class="flex gap-2 mt-6">
+                    <p  data-aos="flip-left" data-aos-duration="2000" class="bg-[#bcbcbc] h-[40px] w-[40px] rounded-[15px] flex justify-center items-center text-[#5e5858] hover:bg-[#00204a] hover:-translate-y-2 hover:scale-[1.1] hover:text-white duration-300 ease-in-out"><i class="fa-brands fa-instagram"></i></p>
+                    <p  data-aos="flip-left"  data-aos-duration="2000" class="bg-[#bcbcbc] h-[40px] w-[40px] rounded-[15px] flex justify-center items-center text-[#5e5858] hover:bg-[#00204a] hover:-translate-y-2 hover:scale-[1.1] hover:text-white duration-300 ease-in-out"><i class="fa-brands fa-twitter"></i></p>
+                    <p data-aos="flip-left"  data-aos-duration="2000" class="bg-[#bcbcbc] h-[40px] w-[40px] rounded-[15px] flex justify-center items-center text-[#5e5858] hover:bg-[#00204a] hover:-translate-y-2 hover:scale-[1.1] hover:text-white duration-300 ease-in-out"><i class="fa-brands fa-facebook-f"></i></p>
+                    <p data-aos="flip-left"  data-aos-duration="2000" class="bg-[#bcbcbc] h-[40px] w-[40px] rounded-[15px] flex justify-center items-center text-[#5e5858] hover:bg-[#00204a] hover:-translate-y-2 hover:scale-[1.1] hover:text-white duration-300 ease-in-out"><i class="fa-brands fa-linkedin-in"></i></p>
+                    <p data-aos="flip-left"  data-aos-duration="2000" class="bg-[#bcbcbc] h-[40px] w-[40px] rounded-[15px] flex justify-center items-center text-[#5e5858] hover:bg-[#00204a] hover:-translate-y-2 hover:scale-[1.1] hover:text-white duration-300 ease-in-out"><i class="fa-brands fa-pinterest"></i></p>
+                    <p data-aos="flip-left"  data-aos-duration="2000" class="bg-[#bcbcbc] h-[40px] w-[40px] rounded-[15px] flex justify-center items-center text-[#5e5858] hover:bg-[#00204a] hover:-translate-y-2 hover:scale-[1.1] hover:text-white duration-300 ease-in-out"><i class="fa-solid fa-basketball"></i></p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col justify-center items-center mt-14 px-4 text-center">
+            <p class="text-[#919191] text-[.8em]">Copyright © 2026 . All Rights Reserved. — Designed with love by <span class="underline">Untree.co</span></p>
+            <p class="text-[#919191] text-[.8em] pt-3">Distributed by <span class="underline">themewagon</span></p>
+        </div>
+    </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
 <script src="app.js"></script>
 </body>

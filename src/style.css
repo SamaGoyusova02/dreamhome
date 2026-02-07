@@ -61,3 +61,13 @@
         height: 100vh;
         width: 100%;
     }
+   .popular::-webkit-scrollbar {
+    display: none;
+}
+
+.customer::-webkit-scrollbar {
+    display: none;
+}
+.under:hover{
+    text-decoration: none;
+}
