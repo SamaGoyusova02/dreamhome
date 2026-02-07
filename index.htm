@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Home</title>
+     <link href="src/output.css" rel="stylesheet">
+     <link rel="stylesheet" href="src/style.css">
+     <link rel="stylesheet" href="src/font.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+         
+        <div class="container w-full">
+                 <swiper-container class="mySwiper w-full" pagination="true" pagination-dynamic-bullets="true" autoplay="true" >
+                    <swiper-slide class="swback1 ">
+                        <div class=" desktop-header hidden md:block lg:block h-[100vh] max-w-full ">
+                            <div class="bg-[#005555] mx-15 mt-5 flex justify-between px-10 h-[80px] items-center rounded-[15px]">
+                                <div><p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p></div>
+                                <ul class="flex gap-5 ">
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Home</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out" onclick="opendrop()">Properties <span class="font-[400] pl-1 text-[.7em] ">▼</span>
+                                        <ul id="dropdown1" class="bg-white text-black px-8  py-3 text-[.9em] fixed top-[85px] rounded-[6px] hidden duration-200 ease-in-out">
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Buy Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Sell Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Dropdown <span class="text-[.7em]">▼</span> </li>
+                                        </ul>
+                                    </li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Services</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">About</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Contact Us</li>
+                                </ul>
+                            </div>
+
+                            <div class="center hidden md:block lg: block mt-[190px]">
+                            <p class="text-white text-[2.2em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] w-[470px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                       <!--Mobil header-->
+                        <div id="menubar" class=" bg-[#005555] opacity-[.8] h-[100vh] w-[150px] fixed top-0 left-[-100%] duration-500 ease-linear z-[1000]">
+                           <p onclick="closemenu()" class="flex justify-end pr-3 pt-3"> <i class="fa-regular fa-circle-xmark text-white"></i></p>
+                            <ul class="text-white flex flex-col items-center gap-1 mt-13">
+                                <li >Home</li>
+                                <li>Properties</li>
+                                <li>Services</li>
+                                <li>About</li>
+                                <li>Contact Us</li>
+                            </ul>
+                        </div>
+                        <div class=" block md:hidden lg:hidden h-[100vh] w-[100%]">
+                                <div class="bg-[#005555] h-[70px] mx-5 mt-5 rounded-[10px] flex justify-between items-center px-3">
+                                <p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p>
+                                <p onclick="openmenu()"><i class="fa-solid fa-bars text-white text-2xl "></i></p>
+                                </div>
+
+                                <!--Center-->
+                                <div class="center block md:hidden lg:hidden mt-[150px]">
+                            <p class="text-white text-[1.5em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] max-w-[180px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                     
+                    </swiper-slide>
+                    <swiper-slide class="swback2">
+                         <div class=" desktop-header hidden md:block lg:block h-[100vh] w-[100%] ">
+                            <div class="bg-[#005555] mx-15 mt-5 flex justify-between px-10 h-[80px] items-center rounded-[15px]">
+                                <div><p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p></div>
+                                <ul class="flex gap-5 ">
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Home</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out" onclick="opendrop()">Properties <span class="font-[400] pl-1 text-[.7em] ">▼</span>
+                                        <ul id="dropdown1" class="bg-white text-black px-8  py-3 text-[.9em] fixed top-[85px] rounded-[6px] hidden duration-200 ease-in-out">
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Buy Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Sell Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Dropdown <span class="text-[.7em]">▼</span> </li>
+                                        </ul>
+                                    </li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Services</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">About</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Contact Us</li>
+                                </ul>
+                            </div>
+
+                            <div class="center hidden md:block lg: block mt-[190px]">
+                            <p class="text-white text-[2.2em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] w-[470px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                      
+                        <div class=" block md:hidden lg:hidden h-[100vh] w-[100%]">
+                                <div class="bg-[#005555] h-[70px] mx-5 mt-5 rounded-[10px] flex justify-between items-center px-3">
+                                <p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p>
+                                <p onclick="openmenu()"><i class="fa-solid fa-bars text-white text-2xl "></i></p>
+                                </div>
+
+                                <!--Center-->
+                                <div class="center block md:hidden lg:hidden mt-[150px]">
+                            <p class="text-white text-[1.5em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] max-w-[180px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                    </swiper-slide>
+                    <swiper-slide class="swback3">
+                             <div class=" desktop-header hidden md:block lg:block h-[100vh] w-[100%] ">
+                            <div class="bg-[#005555] mx-15 mt-5 flex justify-between px-10 h-[80px] items-center rounded-[15px]">
+                                <div><p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p></div>
+                                <ul class="flex gap-5 ">
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Home</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out" onclick="opendrop()">Properties <span class="font-[400] pl-1 text-[.7em] ">▼</span>
+                                        <ul id="dropdown1" class="bg-white text-black px-8  py-3 text-[.9em] fixed top-[85px] rounded-[6px] hidden duration-200 ease-in-out">
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Buy Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Sell Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Dropdown <span class="text-[.7em]">▼</span> </li>
+                                        </ul>
+                                    </li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Services</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">About</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Contact Us</li>
+                                </ul>
+                            </div>
+
+                            <div class="center hidden md:block lg: block mt-[190px]">
+                            <p class="text-white text-[2.2em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] w-[470px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                      
+                        <div class=" block md:hidden lg:hidden h-[100vh] w-[100%]">
+                                <div class="bg-[#005555] h-[70px] mx-5 mt-5 rounded-[10px] flex justify-between items-center px-3">
+                                <p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p>
+                                <p onclick="openmenu()"><i class="fa-solid fa-bars text-white text-2xl "></i></p>
+                                </div>
+
+                                <!--Center-->
+                                <div class="center block md:hidden lg:hidden mt-[150px]">
+                            <p class="text-white text-[1.5em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] max-w-[180px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                    </swiper-slide>
+                    <swiper-slide class="swback4">
+                         <div class=" desktop-header hidden md:block lg:block h-[100vh] w-[100%] ">
+                            <div class="bg-[#005555] mx-15 mt-5 flex justify-between px-10 h-[80px] items-center rounded-[15px]">
+                                <div><p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p></div>
+                                <ul class="flex gap-5 ">
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Home</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out" onclick="opendrop()">Properties <span class="font-[400] pl-1 text-[.7em] ">▼</span>
+                                        <ul id="dropdown1" class="bg-white text-black px-8  py-3 text-[.9em] fixed top-[85px] rounded-[6px] hidden duration-200 ease-in-out">
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Buy Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Sell Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Dropdown <span class="text-[.7em]">▼</span> </li>
+                                        </ul>
+                                    </li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Services</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">About</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Contact Us</li>
+                                </ul>
+                            </div>
+
+                            <div class="center hidden md:block lg: block mt-[190px]">
+                            <p class="text-white text-[2.2em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] w-[470px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                      
+                        <div class=" block md:hidden lg:hidden h-[100vh] w-[100%]">
+                                <div class="bg-[#005555] h-[70px] mx-5 mt-5 rounded-[10px] flex justify-between items-center px-3">
+                                <p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p>
+                                <p onclick="openmenu()"><i class="fa-solid fa-bars text-white text-2xl "></i></p>
+                                </div>
+
+                                <!--Center-->
+                                <div class="center block md:hidden lg:hidden mt-[150px]">
+                            <p class="text-white text-[1.5em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] max-w-[180px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                    </swiper-slide>
+                    <swiper-slide class="swback5">
+                         <div class=" desktop-header hidden md:block lg:block h-[100vh] w-[100%] ">
+                            <div class="bg-[#005555] mx-15 mt-5 flex justify-between px-10 h-[80px] items-center rounded-[15px]">
+                                <div><p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p></div>
+                                <ul class="flex gap-5 ">
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Home</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out" onclick="opendrop()">Properties <span class="font-[400] pl-1 text-[.7em] ">▼</span>
+                                        <ul id="dropdown1" class="bg-white text-black px-8  py-3 text-[.9em] fixed top-[85px] rounded-[6px] hidden duration-200 ease-in-out">
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Buy Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Sell Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Dropdown <span class="text-[.7em]">▼</span> </li>
+                                        </ul>
+                                    </li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Services</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">About</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Contact Us</li>
+                                </ul>
+                            </div>
+
+                            <div class="center hidden md:block lg: block mt-[190px]">
+                            <p class="text-white text-[2.2em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] w-[470px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                      
+                        <div class=" block md:hidden lg:hidden h-[100vh] w-[100%]">
+                                <div class="bg-[#005555] h-[70px] mx-5 mt-5 rounded-[10px] flex justify-between items-center px-3">
+                                <p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p>
+                                <p onclick="openmenu()"><i class="fa-solid fa-bars text-white text-2xl "></i></p>
+                                </div>
+
+                                <!--Center-->
+                                <div class="center block md:hidden lg:hidden mt-[150px]">
+                            <p class="text-white text-[1.5em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] max-w-[180px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                    </swiper-slide>
+                    <swiper-slide class="swback6">
+                         <div class=" desktop-header hidden md:block lg:block h-[100vh] w-[100%] ">
+                            <div class="bg-[#005555] mx-15 mt-5 flex justify-between px-10 h-[80px] items-center rounded-[15px]">
+                                <div><p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p></div>
+                                <ul class="flex gap-5 ">
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Home</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out" onclick="opendrop()">Properties <span class="font-[400] pl-1 text-[.7em] ">▼</span>
+                                        <ul id="dropdown1" class="bg-white text-black px-8  py-3 text-[.9em] fixed top-[85px] rounded-[6px] hidden duration-200 ease-in-out">
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Buy Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Sell Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Dropdown <span class="text-[.7em]">▼</span> </li>
+                                        </ul>
+                                    </li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Services</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">About</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Contact Us</li>
+                                </ul>
+                            </div>
+
+                            <div class="center hidden md:block lg: block mt-[190px]">
+                            <p class="text-white text-[2.2em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] w-[470px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                      
+                        <div class=" block md:hidden lg:hidden h-[100vh] w-[100%]">
+                                <div class="bg-[#005555] h-[70px] mx-5 mt-5 rounded-[10px] flex justify-between items-center px-3">
+                                <p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p>
+                                <p onclick="openmenu()"><i class="fa-solid fa-bars text-white text-2xl "></i></p>
+                                </div>
+
+                                <!--Center-->
+                                <div class="center block md:hidden lg:hidden mt-[150px]">
+                            <p class="text-white text-[1.5em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] max-w-[180px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                    </swiper-slide>
+                    <swiper-slide class="swback7">
+                         <div class=" desktop-header hidden md:block lg:block h-[100vh] w-[100%] ">
+                            <div class="bg-[#005555] mx-15 mt-5 flex justify-between px-10 h-[80px] items-center rounded-[15px]">
+                                <div><p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p></div>
+                                <ul class="flex gap-5 ">
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Home</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out" onclick="opendrop()">Properties <span class="font-[400] pl-1 text-[.7em] ">▼</span>
+                                        <ul id="dropdown1" class="bg-white text-black px-8  py-3 text-[.9em] fixed top-[85px] rounded-[6px] hidden duration-200 ease-in-out">
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Buy Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Sell Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Dropdown <span class="text-[.7em]">▼</span> </li>
+                                        </ul>
+                                    </li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Services</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">About</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Contact Us</li>
+                                </ul>
+                            </div>
+
+                            <div class="center hidden md:block lg: block mt-[190px]">
+                            <p class="text-white text-[2.2em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] w-[470px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                      
+                        <div class=" block md:hidden lg:hidden h-[100vh] w-[100%]">
+                                <div class="bg-[#005555] h-[70px] mx-5 mt-5 rounded-[10px] flex justify-between items-center px-3">
+                                <p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p>
+                                <p onclick="openmenu()"><i class="fa-solid fa-bars text-white text-2xl "></i></p>
+                                </div>
+
+                                <!--Center-->
+                                <div class="center block md:hidden lg:hidden mt-[150px]">
+                            <p class="text-white text-[1.5em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] max-w-[180px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                    </swiper-slide>
+                    <swiper-slide class="swback8">
+                         <div class=" desktop-header hidden md:block lg:block h-[100vh] w-[100%] ">
+                            <div class="bg-[#005555] mx-15 mt-5 flex justify-between px-10 h-[80px] items-center rounded-[15px]">
+                                <div><p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p></div>
+                                <ul class="flex gap-5 ">
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Home</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out" onclick="opendrop()">Properties <span class="font-[400] pl-1 text-[.7em] ">▼</span>
+                                        <ul id="dropdown1" class="bg-white text-black px-8  py-3 text-[.9em] fixed top-[85px] rounded-[6px] hidden duration-200 ease-in-out">
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Buy Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Sell Property</li>
+                                            <li class="hover:text-[#005555] duration-300 ease-linear">Dropdown <span class="text-[.7em]">▼</span> </li>
+                                        </ul>
+                                    </li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Services</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">About</li>
+                                    <li class=" text-[#b8bbc4] hover:text-white duration-300 ease-in-out">Contact Us</li>
+                                </ul>
+                            </div>
+
+                            <div class="center hidden md:block lg: block mt-[190px]">
+                            <p class="text-white text-[2.2em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] w-[470px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                      
+                        <div class=" block md:hidden lg:hidden h-[100vh] w-[100%]">
+                                <div class="bg-[#005555] h-[70px] mx-5 mt-5 rounded-[10px] flex justify-between items-center px-3">
+                                <p class="text-[#b8bbc4] hover:text-white duration-300 ease-in-out font-[600] text-2xl">Property</p>
+                                <p onclick="openmenu()"><i class="fa-solid fa-bars text-white text-2xl "></i></p>
+                                </div>
+
+                                <!--Center-->
+                                <div class="center block md:hidden lg:hidden mt-[150px]">
+                            <p class="text-white text-[1.5em] font-[700] text-white mb-7">Easiest way to find your dream home</p>
+                            <div>
+                                <input class="bg-white text-black h-[50px] rounded-[30px] pl-5 text-[.9em] max-w-[180px]" type="search" placeholder="Your ZIP code or City . e.g. New York"/>
+                                <button class="text-white bg-[#005555] h-[50px] w-[120px] rounded-[30px]">Search</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                    </swiper-slide>
+                </swiper-container>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="flex flex-col md:flex-row lg:flex-row justify-between px-[100px]  mt-7">
+            <p class="text-[1.8em] text-center font-[600]">Popular Properties</p>
+            <button class="bg-[#005555] text-center mt-6 lg:mt-0  w-[170px] h-[45px] text-white flex justify-center rounded-[25px] items-center px-2 ">View all Properties</button>
+        </div>
+    </main>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
